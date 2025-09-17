@@ -161,7 +161,7 @@ export default function App() {
     const inputs = contexto === 'viral' ? { viralTopic, modelUrl } : { produto, dor, beneficios };
     try {
       setIsLoading(true);
-      const response = await fetch('https://scrollstop-backend.vercel.app//api/gerar-receita', {
+      const response = await fetch('https://scrollstop-backend.vercel.app/api/gerar-receita', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ contexto, inputs, language: i18n.language }),
